@@ -30,7 +30,8 @@ class Finance_App:
 		upload_button.grid(row=1,column=0,padx=5,pady=5)
 
 	def browse_file(self):
-		file_path = filedialog.askopenfilename(filetypes=[('CSV files','*.csv')])
+		desktop_dir = os.path.expanduser("~") + "/Desktop"
+		file_path = filedialog.askopenfilename(filetypes=[('CSV files','*.csv')], initialdir=desktop_dir)
 		
 
 if __name__ == '__main__':
